@@ -1,0 +1,42 @@
+.quiz-container{
+    border: 1px solid black;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 238, 249);
+    margin-bottom: 10px;
+}
+
+.icon{
+    height: 30px;
+    width: 30px;
+    text-align: right;
+    align-items: flex-end;
+    margin-left: 90%;
+   color: blue;
+}
+@media only screen and  (max-width:688px) {
+  .quiz-container{
+    border: 1px solid black;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 10px;
+    background-color: rgb(223, 238, 249);
+    overflow-x: hidden;
+}
+.container{
+  overflow-wrap: normal;
+
+  background-color: rgb(223, 238, 249);
+ 
+  
+}
+}
+@media screen and (min-width:689px) and (max-width:992px) {
+  .quiz-container{
+    overflow: hidden;
+  }
+}
+
