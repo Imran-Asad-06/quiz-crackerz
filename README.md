@@ -1,3 +1,11 @@
+# Quiz Hunter
+
+1. Firstly I Made react router ..
+2. Then I made some component 
+3. CreateBrowserRouter in Router.js file and connect it by RouterProvider in (App.js)
+4. Declared common component and Outlet in main.js
+5. fetch api data by using loader
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
