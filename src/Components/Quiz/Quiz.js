@@ -8,10 +8,10 @@ const Quiz = ({quiz}) => {
     const{question , options , correctAnswer} = quiz;
     // console.log(quiz);
     const [ans , setAns] = useState([]);
-    const handleCorrectAnswer = () =>{
-   
+    const handleCorrectAnswer = (options) =>{
+        console.log(options);
         const correct = ans.map(ca => ca.target.value === correctAnswer)
-    
+        
         if(correct){
        
         toast("Right answer");
@@ -36,15 +36,15 @@ const Quiz = ({quiz}) => {
 
         <div className='options'>
         <div>
-            <input className="form-check-input"type="radio" name="flexRadioDefault" id="flexRadioDefault1"onClick={()=>handleCorrectAnswer(correctAnswer)}/>
+            <input className="form-check-input"type="radio" value={options[0]} name="flexRadioDefault" id="flexRadioDefault1"onClick={()=>handleCorrectAnswer(options)}/>
             <ToastContainer />
             <label  className="form-check-label" htmlFor="flexRadioDefault1">
-                {options[0]}
+            {options[0]}
             </label>
         </div>
 
         <div>
-            <input className="form-check-input"type="radio" name="flexRadioDefault" id="flexRadioDefault1"onClick={()=>handleCorrectAnswer(correctAnswer)}/>
+            <input className="form-check-input"type="radio" value={options[1]} name="flexRadioDefault" id="flexRadioDefault1" onClick={()=>handleCorrectAnswer()}/>
             <ToastContainer />
             <label  className="form-check-label" htmlFor="flexRadioDefault1">
                 {options[1]}
@@ -52,7 +52,7 @@ const Quiz = ({quiz}) => {
         </div>
 
         <div>
-            <input className="form-check-input"type="radio" name="flexRadioDefault" id="flexRadioDefault1"onClick={()=>handleCorrectAnswer(correctAnswer)}/>
+            <input className="form-check-input" type="radio" value={options[2]}  name="flexRadioDefault" id="flexRadioDefault1" onClick={()=>handleCorrectAnswer()}/>
             <ToastContainer />
             <label  className="form-check-label" htmlFor="flexRadioDefault1">
                 {options[2]}
@@ -60,7 +60,7 @@ const Quiz = ({quiz}) => {
         </div>
 
         <div>
-            <input className="form-check-input"type="radio" name="flexRadioDefault" id="flexRadioDefault1"onClick={()=>handleCorrectAnswer(correctAnswer)}/>
+            <input className="form-check-input"type="radio" value={options[3]} name="flexRadioDefault" id="flexRadioDefault1" onClick={()=>handleCorrectAnswer()}/>
             <ToastContainer />
             <label  className="form-check-label" htmlFor="flexRadioDefault1">
                 {options[3]}
