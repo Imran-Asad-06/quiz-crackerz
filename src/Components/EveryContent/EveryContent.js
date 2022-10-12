@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import './Everycontent.css';
 const EveryContent = ({content}) => {
     const {id, name,logo,total} = content;
@@ -12,10 +13,11 @@ const EveryContent = ({content}) => {
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
                  Total quiz {total}
-                </Card.Text>
-                <Button variant="primary">Start Quiz</Button>
+                 </Card.Text>
+                 <Link to={`content/${id}`}><Button variant="primary">Start Quiz</Button></Link>
                 </Card.Body>
                 </Card>
+                
                 </div>
             
    
