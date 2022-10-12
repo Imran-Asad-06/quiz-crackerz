@@ -1,9 +1,16 @@
 import React from 'react';
+import './Home.css';
 
 const Home = () => {
+  
     return (
         <div>
-           <h3>Home js file</h3> 
+            <div className='home'>
+               
+            </div>
+            <div>
+               
+            </div>
         </div>
     );
 };

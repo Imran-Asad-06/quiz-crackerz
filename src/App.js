@@ -22,6 +22,9 @@ function App() {
           },
           {
             path:'/content',
+            loader: async() => {
+              return fetch('https://openapi.programming-hero.com/api/quiz');
+            },
             element: <Content></Content>
           },
           {
@@ -29,11 +32,16 @@ function App() {
             element: <Statistics></Statistics>
           }
         ]
+      },
+      {
+        path:'*', element: <div>This Page is not found</div>
       }
   ])
   return (
     <div className="App">
         <RouterProvider router={router}></RouterProvider>
+
+        
     </div>
   );
 }

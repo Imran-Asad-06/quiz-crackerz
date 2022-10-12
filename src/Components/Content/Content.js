@@ -1,10 +1,26 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import EveryContent from '../EveryContent/EveryContent';
+
 
 const Content = () => {
+    const contents = useLoaderData().data;
+    console.log(contents);
+    
     return (
         <div>
-            <h4>this is mainly content</h4>
+            
+            {
+                contents.map(content=> <EveryContent
+                 key={content.id}
+                 content={content}
+                ></EveryContent>)
+
+
+            }
+            
         </div>
+        
     );
 };
 
